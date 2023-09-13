@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho{
+    text-align: center;
+    color: black;   
+}
+
+.cabecalho h2{
+    color: rgb(234, 0, 255);
+}
+
+.container{
+    /* display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center; */
+
+    display: flex;
+    gap: 18px;
+
+}
+
+.licao{
+    /* position: relative;
+    width: 78vw;
+    height: 180px;
+    background-color: pink;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-block: 16px; */
+
+    width: 400px;
+    background-color: rgb(233, 184, 243);
+    border-radius: 8px;
+    padding: 16px;
+    display: grid;
+    text-align: center;
+    place-items: center;
+}
+
+.info{
+    text-align: left;
+}
+
+img[alt~="botao"] {
+    height: 1em;
+    width: 1em;
+}
