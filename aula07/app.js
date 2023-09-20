@@ -1,19 +1,29 @@
 'use strict'
 
-async function pegarEndereco () {
+const cepInput = document.getElementById('cep')
 
-    const url = 'viacep.com.br/ws/01001-000/json/'
+async function pegarCep (cep) {
 
+    const url = `https://viacep.com.br/ws/${cep}/json/`
     const response = await fetch(url)
-    const endereco = await response.json()
-
-    return endereco.message
+    const cepInfo = await response.json()
+    return cepInfos
 }
 
-function criarTag (imagem) {
-    const galeria = document.getElementById('galeria')
-    const tagImg = document.createElement('img')
-    tagImg.src = imagem
+async function preencherCampos () {
+    const endereco = document.getElementById('endereco')
+    const bairro = document.getElementById('bairro')
+    const cidade = document.getElementById('cidade')
+    const estado = document.getElementById('estado')
 
-    galeria.appendChild(tagImg)
+    const cep = await pegarCep(cepInput.value)
+    
+    endereco.value = cep.logradouro
+    bairro.value = cep.bairro
+    cidade.value = cep.localidade
+    estado.value = cep.uf
+
 }
+
+
+cepInput.addEventListener('focusout', preencherCampos)

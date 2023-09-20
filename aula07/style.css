@@ -4,31 +4,3 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: pink;
-    display: grid;
-    justify-content: center;
-    height: 100vh;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.item{
-    position: relative;
-    text-align: right;
-    display: flex;
-    align-items: center;
-    width: 78vw;
-    height: 100px;
-    background-color: #fff;
-    border-radius: 12px;
-    border-color: #000000;
-    padding: 16px;
-    justify-content: start;
-    padding-block: 16px;
-}
