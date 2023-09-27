@@ -4,3 +4,26 @@
     box-sizing: border-box;
 }
 
+form{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.campos{
+    width: 400px;
+    height: 100px;
+    border: 1px solid transparent;
+    background: linear-gradient(white, white), padding-box,linear-gradient(pink rgb(253, 133, 153) rgb(245, 69, 121)) border-box;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: rgb(253, 7, 122);
+}
+
+input{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
